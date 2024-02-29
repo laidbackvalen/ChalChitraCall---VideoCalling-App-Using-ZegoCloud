@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ConferenceActivity">
+
+    <ImageView
+        android:id="@+id/closeImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:src="@drawable/baseline_close_24"
+        app:layout_constraintBottom_toBottomOf="@+id/meetingIdConferenceActivity"
+        app:layout_constraintEnd_toStartOf="@+id/meetingIdConferenceActivity"
+        app:layout_constraintHorizontal_weight="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/meetingIdConferenceActivity" />
+    <TextView
+        android:id="@+id/meetingIdConferenceActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#AE431E"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Meeting ID"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/shareImageView"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toEndOf="@id/closeImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/shareImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:src="@drawable/baseline_share_24"
+        android:background="@color/white"
+        app:layout_constraintHorizontal_weight="0.1"
+        app:layout_constraintStart_toEndOf="@id/meetingIdConferenceActivity"
+        app:layout_constraintBottom_toBottomOf="@+id/meetingIdConferenceActivity"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayoutConferenceActivity"
+        app:layout_constraintTop_toTopOf="@+id/meetingIdConferenceActivity" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutConferenceActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meetingIdConferenceActivity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
